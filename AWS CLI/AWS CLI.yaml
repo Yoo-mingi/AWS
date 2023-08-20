@@ -1,0 +1,20 @@
+AWS CLI install window 입력 후 설치.
+
+cmd에서
+aws --version으로 설치 되었는지 확인.
+
+IAM/Users/Security credentials/Access Keys/Create Access Key
+Access Key ID와 Secret access Key를 받는다.
+
+설정 : CLI에서
+aws configure
+#ID:
+#Secre:
+#Defatulr-resion: *별첨1 참조
+#Default formet
+
+~ aws iam list-users
+# 계정 표시....
+
+*별첨1 : 적을 수 있는 리전 목록 : 
+https://docs.aws.amazon.com/cloudshell/latest/userguide/supported-aws-regions.html

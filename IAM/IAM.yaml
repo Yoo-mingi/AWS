@@ -1,0 +1,42 @@
+IAM : identity Access Management
+사용자를 생성하고 그룹에 배치한다. (계정생성시에 생성한 root계정또한 IAM주 하나)
+필요시 그룹으로 묶을 수도 있다. A,B,C를 develops, D,E를 QA로 묶는 등의 일이라는 것이다. 물론 어느 그룹도 아닌 F를 생성하는 것도 가능하다.
+또한 하나의 user가 서로다른 그룹에 묶여있을 수도있다. 가령, C는 develops지만 QA그룹에도 속할 수 있다는 것이다.
+
+예시)
+Version: "2012-10-17"
+Statement: [
+  {
+    "Effect": "Allw",
+    "Action": "ec2:Describe",
+    "Resource": *
+  }
+]
+
+위의 Json문서를 통해 해당 인원이 ec2에 대한 Describe 권한이 있음을 알 수 있다.
+
+--------------
+
+생성법 : 
+AWS 콘솔에서 IAM 선택.(리전 선택이 필요없는 Global Service이다.)
+
+Users/Add Users
+
+root계정은 위험하니 별도의 관리자 계정을 만들려면?
+A. Add Users에서 사용자 계정입력후 그룹에 배치. 
+
+tag도 가능. 사용자를 추적하고 식별을 위한 정보.
+ex)Key: Department Value: Engineering
+
+* 비밀번호를 자동으로 생성했다면 마지막 차트에서 Download .csv 를 선택해서 패스워드를 확인해야한다.
+
+구성 :
+Version: Policy의 language version.
+ID: 정책을 식별하는 ID(선택사항) ex)S3-Account-Permissions
+Statemrnt: 구성요소
+  - Sid: 식별자 ex)"1"
+  - Effect: 문장이 특성 API에 접근하는걸 Allow(허용)하는지 Deny(거부)하는지를 결정
+  - Principal: 특정 정책이 적용될 사용자, 계정, 역할등을 정의 ex)"AWS": ["arn:aws:iam:1235:root"]
+  - Action: effect에 기반해 허용 및 거부되는 PIA호출 목록. ex) "s3:Getobjent"
+  - Condition: Policy가 언제 적용될지(선택사항)
+

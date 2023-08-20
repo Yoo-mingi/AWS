@@ -1,0 +1,28 @@
+IAM Role.
+서비스 권한에 대한 Role. role은 사용자와 같지만 사람이 사용하는게 아니라 서비스가 사용하는것.
+
+예를들어 EC2인스턴스를 만들었다고 가정한다.
+해당 EC2는 AWS에서 어떠한 작업을 수행해야한다면, 해당 작업을 할 수 있는 권한이 있어야한다.
+그떄 IAM Role을 만들어 EC2와 하나로 묶어 해당 서비스 사용시 EC2 Role을 사용하는 것이다.
+
+몇가지 롤이있는데,
+  - EC2
+  - Lambda Function
+  - Roles for CloudFormation
+  등이있다.
+
+------ 생성법 -----
+IAM/Roles/Create role
+
+emtity 타입선택.
+AWS Service 선택.
+
+EC2
+Next
+
+IAMRead선택
+Role이름 선택. DemoRoleforEC2
+후에 Create 클릭.
+
+여기까지 한다면 Role생성완료. 적용하는 것은 후에 EC2 생성에서 할 것.
+Yoo-mingi

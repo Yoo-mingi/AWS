@@ -1,0 +1,19 @@
+IAM을 만들었다면 그 정보가 침해당하지 않도록 보호해야한다.
+
+1. 비밀번호 정책
+  - 비밀번호 최소길이, 특수기호, 소문자대문자등을 조건으로 요구할 수 있다.
+  - 기간 설정도 가능하며 재설정시에 전에 비밀번호와 같은 비밀번호 금지도 가능하다.
+
+2. Multi Factor Authenrication(MFA)
+  - 사용자의 물리적인 장치를 통한 인증. 비밀번호와 함께 사용시 해킹으로 비밀번호가 노출되어도 사용자 소유의 물리장치가 추가로 필요하기에 해킹 방지 가능.
+  - 옵션으로는 가상 MFA머신. google Authenticator(Phone only), Authy(multi-device), Universal 2nd Factor(U2F) Secyrity Key(yubico의 yubikey 등)...
+
+IAM/Account settings/change password policy
+비밀번호 규칙 정하기 가능. 최소길이나 그런 것.
+
+MFA설정 방법:
+console에서 계정 클릭/보안설정/Active MFA
+옵션은 3가지. 가상MFA(어플), U2F security Key(물리장비), Other hardware MFA device(써드파티 물리장비)
+
+가상 MFA선택. 사용하고자하는 어플리케이션 선택 다운 후 절차에 맞게 설정.
+
