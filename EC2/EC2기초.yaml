@@ -1,0 +1,13 @@
+EC2 생성시에 키 페어 : 인스턴스에 접근하기 위해 SSH 유틸을 사용할 경우 필욯다.
+key file fomrat : MAC,Linux, Win 10이라면 .pem 사용가능. 단, 윈7,8 이라면 ppk 파일을 받아 뿌띠와 사용해야한다.
+
+User data : 스크립트. 약간의 명령을 Ec2인스터가 처음 생성할 때만 시행한다.
+ex)
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enaable htppd
+echo "<h1> Hello World</h1>" /var/www/html/index.html
+
+위는 yum을 통해 httpd를 install하고 enable하는 것이다. 생성시 몇개의 Instance를 생성할지 정할 수 있기에 위와같이 하고 100개를 만들면 httpd가 설치된 100개의 EC2를 한번에 사용할 수 있다.
+

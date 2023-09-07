@@ -1,0 +1,5 @@
+m5.2xlarge
+m : instance class
+5 : generation (AWS improves them over time)
+.2xlarge : size witjin the instance class(small부터 시작)
+
