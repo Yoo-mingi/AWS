@@ -1,0 +1,6 @@
+EBS Volume에서 Create snapshot 클릭
+그리고 EBS 카테고리의 Volume밑에 snapshot 클릭
+
+그리고 생성된 스냅샷이 있고, 우클릭으로 이동 가능.
+action -> Create Volume for snapshot으로 스냅샷을 통한 볼륨 생성가능.
+

@@ -1,0 +1,12 @@
+EC2메뉴의 Spot Request 선택
+
+* : (위에 Pricing History클릭시 가격표 보기 가능)Instance Type입력하고 OS선택. Data range입력.
+밑에 가격표가 나와있음.
+
+Create Spot Fleet Request 클릭
+
+예상치못한 중단 발생시 인스턴스 삭제 옵션또한 존재하며 목적에 맞게 vCPU나 Memory용도로도 쓸 수 있다.
+
+어떤 AZ에 할 것인지 선택
+
+바로 만들고 싶다면 EC2 생성창에서 밑으로 내리면 Advanced details에 Spot Instance도 선택가능.
